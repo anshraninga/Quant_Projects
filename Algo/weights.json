@@ -1,0 +1,39 @@
+{
+  "generated_at": "2026-05-05T12:32:16.318699+00:00",
+  "method": "bayesian_gp_minimize_per_coin_rolling_folds",
+  "lookback_days": 1825,
+  "holdout_pct": 0.2,
+  "snapshot_warmup": 200,
+  "symbols": [
+    "BTC"
+  ],
+  "conviction_threshold": 15.0,
+  "score_metric": "sharpe_normalised",
+  "normalizer": "signal_normalizer.combine_signal_vectors",
+  "per_coin": {
+    "BTC": {
+      "4h": {
+        "technical": 0.459986,
+        "candlestick": 0.080029,
+        "chart": 0.459986
+      },
+      "1d": {
+        "technical": 0.450819,
+        "candlestick": 0.450819,
+        "chart": 0.098361
+      }
+    }
+  },
+  "shared": {
+    "4h": {
+      "technical": 0.459986,
+      "candlestick": 0.080029,
+      "chart": 0.459986
+    },
+    "1d": {
+      "technical": 0.450819,
+      "candlestick": 0.450819,
+      "chart": 0.098361
+    }
+  }
+}

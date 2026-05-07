@@ -1,0 +1,272 @@
+[
+  {
+    "id": "wheat_2022_ukraine",
+    "commodity": "wheat",
+    "date": "2022-02-24",
+    "event": "Russia invades Ukraine — Black Sea grain corridor disrupted",
+    "price_impact": "+45% over 8 weeks",
+    "context": "Ukraine and Russia together account for 28% of global wheat exports. Black Sea ports closed. Global stocks-to-use ratio already at multi-year lows. Egypt, the world's largest wheat importer, faced acute supply risk.",
+    "resolution": "Black Sea Grain Initiative signed July 2022. Prices partially reversed but remained elevated through 2022."
+  },
+  {
+    "id": "wheat_2010_russia_drought",
+    "commodity": "wheat",
+    "date": "2010-08-05",
+    "event": "Russia announces wheat export ban after severe drought destroys 30% of crop",
+    "price_impact": "+60% over 3 months",
+    "context": "The worst Russian drought in decades. Moscow wildfires. Export ban shocked global markets already tight after a poor Australian harvest. Contributed directly to Arab Spring food price pressures in 2010-2011.",
+    "resolution": "Ban lifted in 2011 after new harvest proved strong. Prices reversed sharply."
+  },
+  {
+    "id": "wheat_2012_us_drought",
+    "commodity": "wheat",
+    "date": "2012-06-01",
+    "event": "US corn belt drought — worst since 1956 — spreads to winter wheat regions",
+    "price_impact": "+25% over 6 weeks",
+    "context": "La Nina-driven drought covered 60% of the continental US. Kansas and Oklahoma hard red winter wheat crop ratings fell to multi-decade lows. USDA cut production estimates three consecutive months.",
+    "resolution": "Southern Plains received rainfall by September. Prices corrected as Southern Hemisphere plantings looked favourable."
+  },
+  {
+    "id": "wheat_2007_food_crisis",
+    "commodity": "wheat",
+    "date": "2007-10-01",
+    "event": "Global food crisis — wheat prices double on tight stocks and biofuel demand",
+    "price_impact": "+100% over 12 months to record $13/bushel",
+    "context": "Global wheat stocks fell to 30-year lows. Australian drought cut production by 40%. India and other exporters imposed restrictions. Biofuel mandates diverted US corn, boosting feed wheat demand. World Food Programme declared emergency.",
+    "resolution": "Record 2008 global harvest broke the rally. Prices fell 60% by end of 2008."
+  },
+  {
+    "id": "oil_2022_opec_cut",
+    "commodity": "oil_brent",
+    "date": "2022-10-05",
+    "event": "OPEC+ announces 2 million barrel/day production cut — largest since 2020",
+    "price_impact": "+10% in one week",
+    "context": "Largest OPEC cut since the 2020 pandemic response. Move came despite US pressure to maintain output ahead of midterm elections. Saudi Arabia and Russia coordinated to defend $90/barrel floor. US strategic reserve releases partially offset.",
+    "resolution": "Prices held elevated through Q4 2022 but fell in 2023 as recession fears grew."
+  },
+  {
+    "id": "oil_2020_covid_crash",
+    "commodity": "oil_brent",
+    "date": "2020-03-09",
+    "event": "COVID-19 pandemic + Saudi-Russia price war — oil collapses to 18-year lows",
+    "price_impact": "-65% over 6 weeks. WTI briefly traded negative (-$37/barrel) in April 2020",
+    "context": "Demand destruction from global lockdowns met a Saudi-Russia production war. Storage filled to capacity. WTI May futures went negative as traders paid to avoid physical delivery. Brent stayed positive but fell to $19/barrel.",
+    "resolution": "Historic OPEC+ deal in April 2020 cut 9.7 million bbl/day. Prices recovered as economies reopened."
+  },
+  {
+    "id": "oil_2022_ukraine_sanctions",
+    "commodity": "oil_brent",
+    "date": "2022-02-28",
+    "event": "Western sanctions on Russia following Ukraine invasion — Brent surges to $139/barrel",
+    "price_impact": "+70% from pre-war levels to $139/barrel — highest since 2008",
+    "context": "Russia supplies ~10% of global oil. Swift sanctions froze Russian exports. Europe scrambled to replace ~3 million bbl/day of Russian supply. US released 180 million barrels from SPR. IEA coordinated member releases.",
+    "resolution": "Prices retreated as Russian exports rerouted to India and China at discounts. Brent fell below $90 by mid-2022."
+  },
+  {
+    "id": "natgas_2022_europe",
+    "commodity": "natural_gas",
+    "date": "2022-08-26",
+    "event": "Russia cuts Nord Stream gas flows to Europe to near zero",
+    "price_impact": "+300% from pre-war levels. Dutch TTF hit EUR 340/MWh",
+    "context": "Europe depended on Russia for ~40% of gas supply. Emergency storage filling programme launched. LNG imports surged, redirected from Asia. Germany activated coal plants. Industrial demand rationed. Europe entered winter 2022 at 90% storage thanks to aggressive buying.",
+    "resolution": "Europe diversified supply by winter 2023. Prices normalised to EUR 30-50/MWh by early 2023."
+  },
+  {
+    "id": "natgas_2021_texas_freeze",
+    "commodity": "natural_gas",
+    "date": "2021-02-10",
+    "event": "Winter Storm Uri freezes Texas natural gas infrastructure — prices spike to $1,000/MMBtu",
+    "price_impact": "Spot prices at Waha hub hit $1,000/MMBtu briefly. Henry Hub spiked to $23/MMBtu",
+    "context": "Unprecedented polar vortex collapse brought -20°F temperatures to Texas. Uninsulated wellheads and pipes froze, cutting 10 bcf/day of production. Grid failure left 4 million homes without power. Gas demand for heating and power surged simultaneously.",
+    "resolution": "Storm passed after 7 days. Texas infrastructure winterisation laws enacted. Prices returned to normal within weeks."
+  },
+  {
+    "id": "natgas_2023_europe_normalisation",
+    "commodity": "natural_gas",
+    "date": "2023-01-01",
+    "event": "European gas crisis resolves — mild winter and diversified supply collapse prices",
+    "price_impact": "-85% from peak. TTF fell from EUR 340 to EUR 40/MWh",
+    "context": "Mild European winter of 2022-23 left storage 80%+ full through March. LNG import infrastructure built rapidly — Germany commissioned 5 floating terminals in 6 months. Norwegian pipeline flows at record high. Demand destruction from industry relocation proved sticky.",
+    "resolution": "Prices stabilised at structurally higher levels (EUR 30-50) than pre-2022 (EUR 10-20) reflecting infrastructure costs."
+  },
+  {
+    "id": "copper_2023_chile_drought",
+    "commodity": "copper",
+    "date": "2023-04-15",
+    "event": "Severe drought in Atacama disrupts Chilean copper mining operations",
+    "price_impact": "+8% over 3 weeks",
+    "context": "Chile produces 27% of global copper. Water scarcity forces production cuts at Escondida (world's largest copper mine) and Collahuasi. Mining operations require large water volumes for processing. Codelco also reduced guidance.",
+    "resolution": "Production partially recovered after emergency desalination and water management measures."
+  },
+  {
+    "id": "copper_2020_pandemic_recovery",
+    "commodity": "copper",
+    "date": "2020-11-01",
+    "event": "China V-shaped recovery and green energy stimulus drive copper to multi-year highs",
+    "price_impact": "+80% from March 2020 lows to $4.80/lb by early 2021",
+    "context": "China's rapid post-COVID recovery drove construction and manufacturing demand. Biden green infrastructure plan added EV and renewable demand expectations. LME inventories fell sharply. Goldman called it a new commodity supercycle.",
+    "resolution": "Prices peaked at $4.76/lb in May 2021, consolidated through 2022 as China property sector weakened."
+  },
+  {
+    "id": "copper_2022_chile_strikes",
+    "commodity": "copper",
+    "date": "2022-05-01",
+    "event": "Strike threats at Escondida and El Teniente mines in Chile create supply risk premium",
+    "price_impact": "+5% on strike announcement, partially reversed on settlement",
+    "context": "Escondida (BHP) employs 2,500 workers. El Teniente (Codelco) is the world's largest underground mine. Simultaneous strike threats created rare dual supply shock risk. Chile's new government also proposed higher mining royalties.",
+    "resolution": "Escondida strike averted via agreement. El Teniente strike lasted 2 weeks before resolution."
+  },
+  {
+    "id": "gold_2020_covid",
+    "commodity": "gold",
+    "date": "2020-03-15",
+    "event": "COVID-19 pandemic — global safe haven demand surge amid unprecedented monetary stimulus",
+    "price_impact": "+25% to all-time high $2,075/oz by August 2020",
+    "context": "Global recession fears. Unprecedented monetary stimulus — Fed cut to zero, launched unlimited QE. Negative real rates across developed markets. Classic gold bull conditions. ETF holdings hit record. Central bank buying paused briefly on liquidity needs.",
+    "resolution": "Gold peaked August 2020, consolidated as vaccines developed and real rates rose. Fell to $1,680 by 2021."
+  },
+  {
+    "id": "gold_2011_debt_ceiling",
+    "commodity": "gold",
+    "date": "2011-08-01",
+    "event": "US debt ceiling crisis and S&P sovereign downgrade drive gold to $1,921/oz",
+    "price_impact": "+30% over 6 months to $1,921/oz — then all-time high",
+    "context": "US government debt ceiling standoff triggered first-ever S&P downgrade of US sovereign debt. European debt crisis simultaneously. Real rates deeply negative. Swiss National Bank intervened to cap CHF, driving flows to gold.",
+    "resolution": "Debt ceiling resolved. Gold peaked September 2011, entered multi-year bear market to $1,050 by 2015."
+  },
+  {
+    "id": "gold_2022_ukraine_safehaven",
+    "commodity": "gold",
+    "date": "2022-02-24",
+    "event": "Russia invades Ukraine — gold surges through $2,000 on safe haven demand",
+    "price_impact": "+10% within 2 weeks, briefly touched $2,070",
+    "context": "Classic geopolitical safe haven bid. Russia is world's third largest gold producer. Sanctions froze Russian gold reserves. Central banks (especially emerging market) accelerated gold buying. EUR weakened on energy crisis fears.",
+    "resolution": "Fed rate hike cycle beginning March 2022 pushed real rates up, gold fell back to $1,620 by September 2022."
+  },
+  {
+    "id": "silver_2011_parabolic",
+    "commodity": "silver",
+    "date": "2011-04-25",
+    "event": "Silver surges parabolicaly to $49/oz on QE2 inflation fears, then crashes 30% in one week",
+    "price_impact": "+175% from 2010 low to $49/oz peak. -30% in 5 days on CME margin hikes",
+    "context": "Gold/silver ratio compressed to 31 — extreme by historical standards. Hunt Brother comparisons made. CME raised margin requirements 5 times in 2 weeks. Speculative positioning hit extremes. Industrial demand narrative overpowered fundamentals temporarily.",
+    "resolution": "Silver fell to $33 by end of 2011 as QE fears subsided. Never retested $49 as of 2026."
+  },
+  {
+    "id": "silver_2020_solar_industrial",
+    "commodity": "silver",
+    "date": "2020-07-01",
+    "event": "Green energy investment boom drives silver industrial demand narrative — silver surges 140%",
+    "price_impact": "+140% from March 2020 low of $12 to $29 by August 2020",
+    "context": "Solar panel demand growth requires 80-100 million oz of silver annually. EV adoption adds electronics demand. Gold rally dragged silver higher. ETF inflows hit record. Reddit/retail buying amplified move in early 2021 (silver squeeze).",
+    "resolution": "Industrial demand narrative proved durable. Silver held above $20 structurally into 2023."
+  },
+  {
+    "id": "platinum_2014_south_africa_strike",
+    "commodity": "platinum",
+    "date": "2014-01-23",
+    "event": "Longest platinum strike in South African history — 5 months, AMCU union vs Anglo/Impala/Lonmin",
+    "price_impact": "+15% during strike to $1,520/oz",
+    "context": "South Africa produces ~70% of global platinum. AMCU demanded doubling of wages. Strike at the three largest producers disrupted ~40% of SA production for 5 months — January to June 2014. Total lost production estimated at 1.1 million oz.",
+    "resolution": "Strike resolved June 2014 on wage agreement. Production recovered over several months. Prices gave back most gains on resolution."
+  },
+  {
+    "id": "platinum_2008_eskom_crisis",
+    "commodity": "platinum",
+    "date": "2008-01-25",
+    "event": "Eskom power crisis forces South African mines to suspend operations for 5 days",
+    "price_impact": "+25% in two weeks to $2,273/oz — then all-time record",
+    "context": "South Africa's state power utility Eskom declared force majeure, cutting power to mines. Anglo Platinum, Implats, and Lonmin all suspended operations. Supply shock fears combined with speculative positioning drove platinum above $2,000 for first time.",
+    "resolution": "Power restored after rotational rationing agreed. Platinum fell sharply in H2 2008 during global financial crisis."
+  },
+  {
+    "id": "platinum_2020_covid_auto_demand",
+    "commodity": "platinum",
+    "date": "2020-03-16",
+    "event": "COVID-19 collapses auto demand — platinum falls 40% as catalytic converter outlook deteriorates",
+    "price_impact": "-40% to $560/oz — lowest since 2003",
+    "context": "Automotive sector accounts for ~40% of platinum demand via catalytic converters. Global auto production halted. Palladium premium over platinum widened to record $2,000/oz. Substitution from palladium to platinum in gasoline catalysts began but slowly.",
+    "resolution": "Platinum recovered to $1,300 by 2021 as hydrogen fuel cell demand narrative and palladium substitution grew."
+  },
+  {
+    "id": "corn_2012_us_drought",
+    "commodity": "corn",
+    "date": "2012-06-15",
+    "event": "Worst US drought since 1956 devastates corn belt — corn hits record $8.49/bushel",
+    "price_impact": "+60% over 10 weeks to $8.49/bushel record",
+    "context": "La Nina drove extreme heat and dryness across Iowa, Illinois, Indiana. Crop condition ratings fell to 40% good/excellent from 70% in June. USDA cut yield estimates from 166 to 123 bushels/acre. Ethanol mandate maintained corn demand despite shortage, amplifying price spike.",
+    "resolution": "Southern Hemisphere crops (Brazil, Argentina) proved strong. 2013 US crop was record 13.9 billion bushels. Prices fell back to $4."
+  },
+  {
+    "id": "corn_2022_ukraine_war",
+    "commodity": "corn",
+    "date": "2022-02-24",
+    "event": "Ukraine invasion disrupts corn exports — Ukraine accounts for 15% of global corn trade",
+    "price_impact": "+30% over 6 weeks, reaching $8.00/bushel",
+    "context": "Ukraine exports 30-35 million tonnes of corn annually — primarily to Europe, Middle East, and China. Black Sea port blockade halted shipments at spring export peak. Romania and Hungary imposed temporary export restrictions. EU declared corn emergency measures.",
+    "resolution": "Black Sea Grain Initiative (July 2022) partially restored shipments. Brazil record crop helped offset by late 2022."
+  },
+  {
+    "id": "corn_2023_brazil_record",
+    "commodity": "corn",
+    "date": "2023-02-01",
+    "event": "Brazil posts record corn harvest — global supply glut crushes prices",
+    "price_impact": "-35% from 2022 highs, corn fell to $4.70/bushel by mid-2023",
+    "context": "Brazil's 2022/23 safrinha (second crop) harvest exceeded 135 million tonnes, surpassing the US as the world's largest corn producer for a crop year. Combined with recovering Ukraine exports and weak Chinese demand, global stocks rose sharply.",
+    "resolution": "Corn remained in oversupply through 2023, establishing a new equilibrium below $5/bushel."
+  },
+  {
+    "id": "soybeans_2018_us_china_trade",
+    "commodity": "soybeans",
+    "date": "2018-07-06",
+    "event": "China imposes 25% tariff on US soybeans in response to US steel/aluminium tariffs",
+    "price_impact": "-20% over 3 months, soybeans fell from $10 to $8/bushel",
+    "context": "China buys 60% of globally traded soybeans — and had bought 30% of US exports. Tariffs immediately redirected Chinese purchases to Brazil. US soybean farmers faced catastrophic losses. Brazil premium over US soybeans widened to $1.50/bushel. USDA launched Market Facilitation Program payments.",
+    "resolution": "Phase 1 trade deal (January 2020) restored some Chinese purchases. US-Brazil market share permanently shifted."
+  },
+  {
+    "id": "soybeans_2020_la_nina_brazil",
+    "commodity": "soybeans",
+    "date": "2020-11-01",
+    "event": "La Nina drought hits Brazilian soybean areas — prices surge on tightest global stocks in 8 years",
+    "price_impact": "+80% over 12 months, soybeans hit $16/bushel — highest since 2012",
+    "context": "La Nina reduced Mato Grosso and Parana rainfall during critical soybean planting. Brazilian harvest delayed 3-4 weeks. China post-COVID recovery drove record import demand simultaneously. US carryout stocks fell to pipeline minimums.",
+    "resolution": "2021/22 South American crop recovered. Chinese demand moderated. Prices eased from peak by mid-2022."
+  },
+  {
+    "id": "soybeans_2022_argentina_drought",
+    "commodity": "soybeans",
+    "date": "2022-11-01",
+    "event": "Severe La Nina drought cuts Argentine soybean harvest by 40% — worst in 30 years",
+    "price_impact": "+10-15% premium for Brazilian soybeans as Argentina supply collapses",
+    "context": "Argentina is the world's largest exporter of soybean meal and oil. La Nina drought hit Cordoba and Buenos Aires provinces during critical pod-filling stage. Argentine government peso devaluation complicated export decisions. USDA cut Argentine crop estimate from 51 to 25 million tonnes.",
+    "resolution": "Brazil's record 2022/23 harvest (153 million tonnes) offset Argentine losses. Global meal/oil markets tightened significantly."
+  },
+  {
+    "id": "sugar_2023_india_restrictions",
+    "commodity": "sugar",
+    "date": "2023-10-01",
+    "event": "India restricts sugar exports amid El Nino drought concerns — prices hit 12-year high",
+    "price_impact": "+15% to 12-year high of 27 cents/lb",
+    "context": "India is the largest sugar producer. El Nino reduced monsoon rainfall in Maharashtra and Karnataka — primary cane-growing states. India had already restricted ethanol diversion from cane to protect sugar output. Brazil crop insufficient to offset simultaneously.",
+    "resolution": "Prices peaked late 2023, fell as Brazil 2024 crop proved strong and Indian production recovered."
+  },
+  {
+    "id": "sugar_2016_india_surplus",
+    "commodity": "sugar",
+    "date": "2016-01-01",
+    "event": "India and Brazil simultaneous record crops create global sugar glut — prices collapse",
+    "price_impact": "-30% over 6 months, raw sugar fell to 12 cents/lb",
+    "context": "India produced record 28 million tonnes on strong monsoon. Brazil also had a strong crop. Thailand exports increased. Global surplus estimated at 10 million tonnes — largest in 5 years. China reduced imports as domestic production recovered.",
+    "resolution": "India shifted cane to ethanol production from 2018. La Nina reduced Australian and Thai output. Market rebalanced by 2017."
+  },
+  {
+    "id": "sugar_2021_brazil_frost",
+    "commodity": "sugar",
+    "date": "2021-07-01",
+    "event": "Unprecedented frosts hit Brazilian sugarcane belt — worst cold event in 30 years",
+    "price_impact": "+12% within 2 weeks as damage to ratoon cane assessed",
+    "context": "Frosts affected Parana and Sao Paulo states in late June/July 2021 — extremely unusual for tropical sugarcane regions. Ratoon cane (regrowth from previous year's stubble) damaged, reducing 2022 production outlook. Brazil was already dealing with drought that cut 2021 crop by 15%.",
+    "resolution": "Full damage took months to assess. 2022 Brazilian production fell ~8% before recovering in 2023."
+  }
+]

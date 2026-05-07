@@ -1,0 +1,11 @@
+.env
+data/
+__pycache__/
+*.pyc
+*.pyo
+*.json
+!rag/historical_events.json
+server.log
+server_err.log
+.venv/
+venv/

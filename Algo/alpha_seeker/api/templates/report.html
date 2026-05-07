@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Alpha-Seeker — {{ symbol }}</title>
+<style>
+  :root {
+    --bg: #0d1117; --surface: #161b22; --border: #30363d;
+    --text: #e6edf3; --muted: #8b949e;
+    --bull: #3fb950; --bear: #f85149; --neutral: #d29922;
+    --accent: #58a6ff; --radius: 8px;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: var(--bg); color: var(--text); font-family: 'Segoe UI', system-ui, sans-serif; padding: 24px; max-width: 900px; margin: 0 auto; }
+  h1 { font-size: 1.4rem; color: var(--accent); margin-bottom: 4px; }
+  .subtitle { color: var(--muted); font-size: 0.85rem; margin-bottom: 24px; }
+  .card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 20px; margin-bottom: 16px; }
+  .card-title { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); margin-bottom: 12px; }
+  .badge {
+    display: inline-block; padding: 3px 10px; border-radius: 12px;
+    font-size: 0.75rem; font-weight: 600; letter-spacing: 0.05em;
+  }
+  .badge-bull { background: rgba(63,185,80,0.15); color: var(--bull); border: 1px solid var(--bull); }
+  .badge-bear { background: rgba(248,81,73,0.15); color: var(--bear); border: 1px solid var(--bear); }
+  .badge-neutral { background: rgba(210,153,34,0.15); color: var(--neutral); border: 1px solid var(--neutral); }
+  .badge-long { background: rgba(63,185,80,0.25); color: var(--bull); border: 1px solid var(--bull); }
+  .badge-short { background: rgba(248,81,73,0.25); color: var(--bear); border: 1px solid var(--bear); }
+  .badge-stay { background: rgba(139,148,158,0.2); color: var(--muted); border: 1px solid var(--border); }
+  .agent-row { display: flex; align-items: flex-start; gap: 12px; margin-bottom: 16px; padding-bottom: 16px; border-bottom: 1px solid var(--border); }
+  .agent-row:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+  .agent-name { min-width: 110px; font-weight: 600; font-size: 0.9rem; }
+  .agent-body { flex: 1; }
+  .agent-meta { display: flex; gap: 10px; align-items: center; margin-bottom: 6px; }
+  .conf-bar-wrap { width: 80px; height: 6px; background: var(--border); border-radius: 3px; }
+  .conf-bar { height: 100%; border-radius: 3px; background: var(--accent); }
+  .reasoning { font-size: 0.88rem; color: var(--text); line-height: 1.55; }
+  .rag-tag { font-size: 0.72rem; padding: 2px 7px; border-radius: 10px; margin-left: 4px; }
+  .rag-supported { background: rgba(63,185,80,0.15); color: var(--bull); }
+  .rag-contradicted { background: rgba(248,81,73,0.15); color: var(--bear); }
+  .rag-insufficient { background: rgba(139,148,158,0.15); color: var(--muted); }
+  .revised-tag { font-size: 0.72rem; padding: 2px 7px; border-radius: 10px; background: rgba(210,153,34,0.15); color: var(--neutral); margin-left: 4px; }
+  .final-dir { font-size: 1.6rem; font-weight: 700; margin-bottom: 8px; }
+  .final-dir.long { color: var(--bull); }
+  .final-dir.short { color: var(--bear); }
+  .final-dir.stayout { color: var(--muted); }
+  .risks { margin-top: 10px; }
+  .risk-item { font-size: 0.85rem; color: var(--muted); padding: 4px 0; padding-left: 14px; position: relative; }
+  .risk-item::before { content: '⚠'; position: absolute; left: 0; }
+  .debate-bubble { background: #0d1117; border: 1px solid var(--border); border-radius: 6px; padding: 12px; margin-bottom: 10px; }
+  .debate-label { font-size: 0.72rem; color: var(--accent); font-weight: 600; margin-bottom: 5px; }
+  .debate-text { font-size: 0.85rem; line-height: 1.5; }
+  .delta-neg { color: var(--bear); }
+  .delta-pos { color: var(--bull); }
+  .memory-box { font-size: 0.82rem; font-family: monospace; white-space: pre-wrap; color: var(--muted); line-height: 1.6; }
+  .meta-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 10px; }
+  .meta-item { background: #0d1117; border-radius: 6px; padding: 10px; }
+  .meta-label { font-size: 0.72rem; color: var(--muted); margin-bottom: 2px; }
+  .meta-val { font-size: 1.0rem; font-weight: 600; color: var(--text); }
+  .revisit { font-size: 0.85rem; color: var(--muted); margin-top: 10px; font-style: italic; }
+</style>
+</head>
+<body>
+
+<h1>Alpha-Seeker &mdash; {{ symbol }}</h1>
+<p class="subtitle">{{ r.timestamp[:19].replace("T"," ") }} UTC &nbsp;|&nbsp; {{ r.final.agent_agreement }}</p>
+
+<!-- FINAL RECOMMENDATION -->
+<div class="card">
+  <div class="card-title">Final Recommendation</div>
+  {% set dir = r.final.direction %}
+  <div class="final-dir {{ 'long' if dir=='LONG' else 'short' if dir=='SHORT' else 'stayout' }}">
+    {{ dir }}
+  </div>
+  <p style="font-size:0.85rem;color:var(--muted);margin-bottom:10px;">
+    Conviction: {{ "%.0f"|format(r.final.conviction * 100) }}%
+    &nbsp;|&nbsp; Agreement: {{ r.final.agent_agreement }}
+  </p>
+  <p class="reasoning">{{ r.final.reasoning }}</p>
+  {% if r.final.key_risks %}
+  <div class="risks">
+    {% for risk in r.final.key_risks %}
+    <div class="risk-item">{{ risk }}</div>
+    {% endfor %}
+  </div>
+  {% endif %}
+  {% if r.final.conditions_to_revisit %}
+  <p class="revisit">Revisit when: {{ r.final.conditions_to_revisit }}</p>
+  {% endif %}
+</div>
+
+<!-- AGENTS -->
+<div class="card">
+  <div class="card-title">Agent Theses</div>
+
+  {% for agent_name, agent in r.agents.items() %}
+  {% set dir = agent.direction %}
+  <div class="agent-row">
+    <div class="agent-name">{{ agent_name | capitalize }}</div>
+    <div class="agent-body">
+      <div class="agent-meta">
+        <span class="badge {{ 'badge-bull' if dir=='BULLISH' else 'badge-bear' if dir=='BEARISH' else 'badge-neutral' }}">
+          {{ dir }}
+        </span>
+        <div class="conf-bar-wrap">
+          <div class="conf-bar" style="width:{{ (agent.confidence*100)|int }}%"></div>
+        </div>
+        <span style="font-size:0.8rem;color:var(--muted);">{{ "%.0f"|format(agent.confidence*100) }}%</span>
+        {% set rs = agent.rag_status %}
+        <span class="rag-tag {{ 'rag-supported' if rs=='SUPPORTED' else 'rag-contradicted' if rs=='CONTRADICTED' else 'rag-insufficient' }}">
+          RAG: {{ rs }}
+        </span>
+        {% if agent.revision_applied %}
+        <span class="revised-tag">revised</span>
+        {% endif %}
+      </div>
+      <p class="reasoning">{{ agent.reasoning }}</p>
+      {% if agent.key_signals %}
+      <p style="font-size:0.78rem;color:var(--muted);margin-top:5px;">
+        {{ agent.key_signals | join(" &nbsp;·&nbsp; ") }}
+      </p>
+      {% endif %}
+    </div>
+  </div>
+  {% endfor %}
+</div>
+
+<!-- DEBATE -->
+{% if r.debate.rounds %}
+<div class="card">
+  <div class="card-title">Debate &mdash; {{ r.debate.rounds | length }} round(s)
+    {% if r.debate.consensus_reached %} &nbsp;<span style="color:var(--bull)">✓ consensus</span>{% endif %}
+  </div>
+  {% for round in r.debate.rounds %}
+  <div class="debate-bubble">
+    <div class="debate-label">
+      {{ round.challenger | upper }} → {{ round.challenged | upper }}
+      {% if round.confidence_delta != 0 %}
+      &nbsp;
+      <span class="{{ 'delta-neg' if round.confidence_delta < 0 else 'delta-pos' }}">
+        Δ{{ "%+.2f"|format(round.confidence_delta) }}
+      </span>
+      {% endif %}
+    </div>
+    <p class="debate-text"><strong>Challenge:</strong> {{ round.challenge }}</p>
+    <p class="debate-text" style="margin-top:5px;"><strong>Response:</strong> {{ round.response }}</p>
+  </div>
+  {% endfor %}
+</div>
+{% endif %}
+
+<!-- MEMORY -->
+<div class="card">
+  <div class="card-title">Memory Context</div>
+  <div class="memory-box">{{ r.memory.context_summary }}</div>
+</div>
+
+<!-- METADATA -->
+<div class="card">
+  <div class="card-title">Run Metadata</div>
+  <div class="meta-grid">
+    <div class="meta-item">
+      <div class="meta-label">Duration</div>
+      <div class="meta-val">{{ r.metadata.duration_seconds }}s</div>
+    </div>
+    <div class="meta-item">
+      <div class="meta-label">LLM Calls</div>
+      <div class="meta-val">{{ r.metadata.llm_calls }}</div>
+    </div>
+    <div class="meta-item">
+      <div class="meta-label">Est. Cost</div>
+      <div class="meta-val">${{ "%.4f"|format(r.metadata.estimated_cost_usd) }}</div>
+    </div>
+    <div class="meta-item">
+      <div class="meta-label">RAG Docs</div>
+      <div class="meta-val">{{ r.metadata.rag_docs_checked }}</div>
+    </div>
+  </div>
+  {% if r.metadata.errors %}
+  <p style="margin-top:10px;font-size:0.8rem;color:var(--bear);">
+    Errors: {{ r.metadata.errors | join(", ") }}
+  </p>
+  {% endif %}
+</div>
+
+</body>
+</html>
