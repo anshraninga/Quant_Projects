@@ -1,17 +1,17 @@
-# Quant Projects — Ansh Raninga
+# Quant Projects By Ansh Raninga
 
 A progression from quantitative research notebooks to 
 production-grade agentic AI systems.
 
 ## Production Systems
 
-### Alpha-Seeker — Crypto Multi-Agent Research System
+### Algo/Alpha-Seeker: Crypto Multi-Agent Research System
 LangGraph agents debate crypto trade ideas using technical, 
 sentiment, and fundamental signals. Self-RAG verification, 
 inter-agent debate, long-term memory with outcome tracking.
 FastAPI + Docker. → [View](./Algo/)
 
-### CommodityKing — Commodity Fundamental Analysis
+### CommodityKing: Commodity Fundamental Analysis
 Inspired by Renaissance Technologies' non-price signal approach. 
 Three agents analyse geopolitics, weather across 25 global 
 producing regions, and supply/demand fundamentals across 10 
